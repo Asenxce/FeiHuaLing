@@ -8,6 +8,7 @@ backend/**/target/
 *.war
 
 # IDE
+.trae/
 .idea/
 *.iws
 *.iml
