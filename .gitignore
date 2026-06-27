@@ -41,3 +41,6 @@ frontend/SKILL.md
 
 # 导入日志
 import_log_*.txt
+
+# Git Hooks 运行标记
+.githooks/.restore_flag

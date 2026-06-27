@@ -80,6 +80,10 @@
 
 ```
 all_project/
+├── LICENSE                              # MIT 开源许可证
+├── README.md                            # 项目说明文档
+├── .gitignore
+│
 ├── backend/
 │   └── feihualingbattle/                # Spring Boot 后端
 │       ├── src/main/java/com/example/feihualingbattle/
@@ -98,23 +102,23 @@ all_project/
 │       │       ├── schema.sql           # 建表 SQL
 │       │       └── migration/           # 数据库迁移脚本
 │       ├── import_poetry.py             # 诗词数据导入脚本
-│       ├── chinese-poetry-data/         # 诗词 JSON 原始数据（未上传）
+│       ├── .env.example                 # 环境变量模板
 │       └── pom.xml
 │
 ├── frontend/
 │   └── FeihuaLingGame/                  # Android 客户端
 │       └── app/src/main/java/com/example/feihualinggame/
-│           ├── activity/                # 26 个 Activity 页面
-│           ├── fragment/                # 5 个 Fragment（底部导航）
+│           ├── activity/                # Activity 页面
+│           ├── fragment/                # Fragment（底部导航）
 │           ├── adapter/                 # 列表适配器
 │           ├── bean/                    # 数据模型
 │           ├── validator/               # 前端规则引擎（校验层）
 │           ├── constant/                # 常量配置
-│           └── utils/                   # 工具类（18 个）
+│           └── utils/                   # 工具类
 │
-├── 详细设计报告.md
-├── 系统实现集成和测试报告.md
-└── .gitignore
+└── backend/feihualingbattle/chinese-poetry-data/  # 诗词 JSON 数据（未上传）
+    ├── tang/                            # 全唐诗
+    └── song/                            # 全宋词
 ```
 
 ---
@@ -324,5 +328,7 @@ mvn spring-boot:run
 ---
 
 ## 开源许可
+
+本项目采用 [MIT License](LICENSE) 开源许可证。
 
 本项目中的诗词数据来源于 [chinese-poetry](https://github.com/chinese-poetry/chinese-poetry) 开源项目。

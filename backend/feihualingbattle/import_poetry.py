@@ -49,11 +49,11 @@ logger.info(f"日志文件已创建: {log_filename}")
 
 # ==================== 配置区域 ====================
 DB_CONFIG = {
-    'host': os.environ.get('DB_HOST', 'localhost'),
-    'port': int(os.environ.get('DB_PORT', '3306')),
-    'user': os.environ.get('DB_USERNAME', 'root'),
-    'password': os.environ.get('DB_PASSWORD', 'your_db_password'),
-    'database': os.environ.get('DB_NAME', 'feihualingbattle'),
+    'host': 'localhost',
+    'port': 3306,
+    'user': 'root',
+    'password': 'your_db_password',
+    'database': 'feihualingbattle',
     'charset': 'utf8mb4'
 }
 
