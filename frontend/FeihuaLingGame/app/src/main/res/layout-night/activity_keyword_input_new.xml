@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/poetry_background">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/poetry_card_background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="16dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/btnTopBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="返回" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvKeywordInputTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="准备界面"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_text_primary"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_fan"
+            android:contentDescription="飞花令" />
+    </LinearLayout>
+
+    <!-- 可滚动内容区 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 模式说明卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/poetry_card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvModeHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="单关键字飞花令：输入一个汉字作为关键字"
+                        android:textSize="14sp"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:lineSpacingExtra="4dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 时间难度选择 -->
+            <TextView
+                android:id="@+id/tv_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间难度"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_primary"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:id="@+id/card_time_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnTime15"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:text="15s"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_position_selector"
+                    android:background="@drawable/bg_position_selector" />
+
+                <Button
+                    android:id="@+id/btnTime30"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="30s"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_position_selector"
+                    android:background="@drawable/bg_position_selector" />
+
+                <Button
+                    android:id="@+id/btnTime60"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="60s"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_position_selector"
+                    android:background="@drawable/bg_position_selector" />
+            </LinearLayout>
+
+            <!-- 关键字输入区域 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tvKeywordLabel1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="关键字"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/poetry_primary" />
+
+                <!-- 随机按钮 -->
+                <ImageView
+                    android:id="@+id/btnRandomKeyword"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_refresh"
+                    android:contentDescription="随机关键字"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <!-- 大号输入框（核心焦点） -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/poetry_primary"
+                app:cardBackgroundColor="@color/poetry_card_background">
+
+                <EditText
+                    android:id="@+id/etKeyword1"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@color/transparent"
+                    android:padding="16dp"
+                    android:textSize="48sp"
+                    android:textColor="@color/poetry_primary"
+                    android:textColorHint="@color/poetry_text_hint"
+                    android:hint="春"
+                    android:inputType="text"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:fontFamily="serif"
+                    android:alpha="0.85" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 第二个关键字输入（双字模式） -->
+            <LinearLayout
+                android:id="@+id/llKeyword2Container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第二个关键字"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/poetry_primary"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- 随机按钮2 -->
+                <ImageView
+                    android:id="@+id/btnRandomKeyword2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_refresh"
+                    android:contentDescription="随机关键字"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="@color/poetry_primary"
+                    app:cardBackgroundColor="@color/poetry_card_background">
+
+                    <EditText
+                        android:id="@+id/etKeyword2"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="@android:color/transparent"
+                        android:padding="16dp"
+                        android:textSize="48sp"
+                        android:textColor="@color/poetry_primary"
+                        android:textColorHint="@color/poetry_text_hint"
+                        android:hint="月"
+                        android:inputType="text"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:fontFamily="serif"
+                        android:alpha="0.85" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- 位置选择器（位置飞花令） -->
+            <LinearLayout
+                android:id="@+id/llPositionSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关键字位置"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/poetry_primary"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/poetry_card_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- 可视化位置展示 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="选择关键字应出现的位置："
+                            android:textSize="13sp"
+                            android:textColor="@color/poetry_text_secondary"
+                            android:layout_marginBottom="12dp" />
+
+                        <!-- 位置可视化展示区 -->
+                        <LinearLayout
+                            android:id="@+id/llPositionVisual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/poetry_card_alt"
+                            android:padding="12dp"
+                            android:layout_marginBottom="12dp">
+
+                            <!-- 诗句示例 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:layout_marginBottom="8dp">
+
+                                <TextView
+                                    android:id="@+id/tvChar1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="柳"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/poetry_text_primary"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/tvChar2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="暗"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/poetry_text_primary"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/tvChar3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="花"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/poetry_text_primary"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/tvChar4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="明"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/poetry_text_primary"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/tvChar5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="又"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/poetry_text_primary"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/tvChar6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="一"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/poetry_text_primary"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/tvChar7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="村"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/poetry_text_primary"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <!-- 位置标记 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/tvPos1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_weight="1"
+                                    android:text="1"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/poetry_text_tertiary"
+                                    android:gravity="center"
+                                    android:background="@drawable/bg_position_item"
+                                    android:layout_marginEnd="2dp" />
+
+                                <TextView
+                                    android:id="@+id/tvPos2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_weight="1"
+                                    android:text="2"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/poetry_text_tertiary"
+                                    android:gravity="center"
+                                    android:background="@drawable/bg_position_item"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginEnd="2dp" />
+
+                                <TextView
+                                    android:id="@+id/tvPos3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_weight="1"
+                                    android:text="3"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/poetry_text_tertiary"
+                                    android:gravity="center"
+                                    android:background="@drawable/bg_position_item"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginEnd="2dp" />
+
+                                <TextView
+                                    android:id="@+id/tvPos4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_weight="1"
+                                    android:text="4"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/poetry_text_tertiary"
+                                    android:gravity="center"
+                                    android:background="@drawable/bg_position_item"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginEnd="2dp" />
+
+                                <TextView
+                                    android:id="@+id/tvPos5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_weight="1"
+                                    android:text="5"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/poetry_text_tertiary"
+                                    android:gravity="center"
+                                    android:background="@drawable/bg_position_item"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginEnd="2dp" />
+
+                                <TextView
+                                    android:id="@+id/tvPos6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_weight="1"
+                                    android:text="6"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/poetry_text_tertiary"
+                                    android:gravity="center"
+                                    android:background="@drawable/bg_position_item"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginEnd="2dp" />
+
+                                <TextView
+                                    android:id="@+id/tvPos7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="32dp"
+                                    android:layout_weight="1"
+                                    android:text="7"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/poetry_text_tertiary"
+                                    android:gravity="center"
+                                    android:background="@drawable/bg_position_item"
+                                    android:layout_marginStart="2dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部固定按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/poetry_card_background"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btnStartBattle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="开始对战"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/brown_dark"
+            android:elevation="4dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- 返回按钮 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/card_white_night"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_back"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="返回" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="返回"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brown_dark" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>

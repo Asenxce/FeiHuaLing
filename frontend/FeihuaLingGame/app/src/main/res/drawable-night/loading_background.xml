@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 加载界面背景 — 古风宣纸渐变（夜间模式） -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景渐变 -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:startColor="@color/paper"
+                android:centerColor="@color/paper_dark"
+                android:endColor="@color/paper_warm"
+                android:type="linear" />
+        </shape>
+    </item>
+    
+    <!-- 装饰纹理 -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:startColor="@android:color/transparent"
+                android:centerColor="#0A000000"
+                android:endColor="@android:color/transparent"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

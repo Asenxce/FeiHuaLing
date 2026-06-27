@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态 -->
+    <item android:state_selected="true" android:color="@color/poetry_primary" />
+    <!-- 按下状态 -->
+    <item android:state_pressed="true" android:color="@color/poetry_primary" />
+    <!-- 默认状态 -->
+    <item android:color="@color/poetry_text_secondary" />
+</selector>

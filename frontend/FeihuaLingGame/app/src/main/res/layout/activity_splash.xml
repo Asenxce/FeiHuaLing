@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient_bg">
+
+    <!-- 中心内容 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:src="@drawable/ic_fan"
+            android:contentDescription="飞花令 Logo"
+            android:elevation="8dp" />
+
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="飞花令"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_primary"
+            android:shadowColor="#40000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4" />
+
+        <!-- 副标题 -->
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="诗词对战 · 以诗会友"
+            android:textSize="17sp"
+            android:textColor="@color/poetry_text_secondary"
+            android:letterSpacing="0.05" />
+    </LinearLayout>
+
+    <!-- 底部版本号 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:text="v1.0.0"
+        android:textSize="13sp"
+        android:textColor="@color/poetry_text_secondary"
+        android:alpha="0.6" />
+
+</FrameLayout>

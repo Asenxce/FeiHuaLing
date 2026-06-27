@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <!-- 标题栏 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/surface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <LinearLayout
+                android:id="@+id/btnTopBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:tint="@color/poetry_text_primary" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvKeywordSelectTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择关键字"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_text_primary"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_fan"
+                android:contentDescription="飞花令" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large">
+
+            <!-- 快速选择区 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快速选择"
+                style="@style/TextBody"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/margin_normal" />
+
+            <!-- 第一行关键字按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_normal">
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="花" />
+
+                <View
+                    android:layout_width="@dimen/margin_small"
+                    android:layout_height="0dp" />
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="月" />
+
+                <View
+                    android:layout_width="@dimen/margin_small"
+                    android:layout_height="0dp" />
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="风" />
+
+                <View
+                    android:layout_width="@dimen/margin_small"
+                    android:layout_height="0dp" />
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="春" />
+            </LinearLayout>
+
+            <!-- 第二行关键字按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin_huge">
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="雪" />
+
+                <View
+                    android:layout_width="@dimen/margin_small"
+                    android:layout_height="0dp" />
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="酒" />
+
+                <View
+                    android:layout_width="@dimen/margin_small"
+                    android:layout_height="0dp" />
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="夜" />
+
+                <View
+                    android:layout_width="@dimen/margin_small"
+                    android:layout_height="0dp" />
+
+                <Button
+                    style="@style/ButtonKeyword"
+                    android:text="山" />
+            </LinearLayout>
+
+            <!-- 自定义输入区 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义输入"
+                style="@style/TextBody"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/margin_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/margin_huge">
+
+                <EditText
+                    android:id="@+id/etKeywordSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="输入自定义关键字"
+                    android:inputType="text"
+                    style="@style/EditTextBase"
+                    android:layout_marginEnd="@dimen/margin_normal" />
+
+                <Button
+                    android:id="@+id/btnConfirmKeyword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认"
+                    style="@style/ButtonSecondary"
+                    android:minWidth="80dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部操作 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/surface"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btnStartBattle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="开始对战"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_on_primary"
+            android:backgroundTint="@color/gold"
+            app:cornerRadius="28dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="10dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnBackToGameMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/gold"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="返回" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="返回上一步"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_on_primary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PoetryQueryActivity的中间内容区域布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/poetry_background">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient"
+        android:padding="20dp"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_book_outline"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="诗词查询" />
+
+            <TextView
+                android:id="@+id/tvPoetryQueryTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="诗词查询"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:shadowColor="#80000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 查询条件卡片 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:elevation="4dp"
+        android:layout_margin="16dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="查询条件" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询条件"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_primary" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/poetry_divider"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 查询类型和关键词 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spnQueryType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/etQueryKeyword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入关键词"
+                android:inputType="text"
+                android:background="@drawable/edit_text_background"
+                android:textSize="16sp"
+                android:textColor="@color/poetry_text_primary"
+                android:textColorHint="@color/poetry_text_secondary"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <!-- 查询按钮 -->
+        <Button
+            android:id="@+id/btnSearchPoetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="搜索诗词"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_primary_bg"
+            android:elevation="4dp"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="16dp"
+            android:padding="14dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="10dp" />
+    </LinearLayout>
+
+    <!-- 结果标题 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_article_outline"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="查询结果" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询结果"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_text_primary" />
+    </LinearLayout>
+
+    <!-- 查询结果列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPoetryResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/card_background"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

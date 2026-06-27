@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/apk/res/android">
+    <!-- 飞花令 古风组件样式 — 夜间模式 -->
+
+    <!-- ==================== 按钮 ==================== -->
+    <style name="ButtonGold" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_primary_bg</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="cornerRadius">@dimen/radius_medium</item>
+    </style>
+
+    <style name="ButtonGold.Large">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">@dimen/text_size_button</item>
+    </style>
+
+    <style name="ButtonRed" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_danger_bg</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="cornerRadius">@dimen/radius_medium</item>
+    </style>
+
+    <style name="ButtonOutline" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_outline_bg</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="cornerRadius">@dimen/radius_medium</item>
+    </style>
+
+    <style name="ButtonSecondary" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="cornerRadius">@dimen/radius_medium</item>
+    </style>
+
+    <style name="ButtonKeyword" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_keyword</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="cornerRadius">@dimen/radius_circle</item>
+    </style>
+
+    <style name="ButtonKeyword.Active">
+        <item name="android:background">@drawable/button_keyword_active</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+    </style>
+
+    <style name="ButtonSmall" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="cornerRadius">@dimen/radius_small</item>
+    </style>
+
+    <style name="ButtonPill" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="cornerRadius">@dimen/radius_pill</item>
+    </style>
+
+    <!-- ==================== 卡片 ==================== -->
+    <style name="CardBase">
+        <item name="android:background">@drawable/card_white</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:padding">@dimen/padding_large</item>
+    </style>
+
+    <style name="CardSmall">
+        <item name="android:background">@drawable/card_white</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="CardWarmGray">
+        <item name="android:background">@drawable/card_warm_gray</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">@dimen/padding_large</item>
+    </style>
+
+    <style name="CardGoldGradient">
+        <item name="android:background">@drawable/card_gold_gradient</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">@dimen/padding_large</item>
+    </style>
+
+    <style name="CardBrownGradient">
+        <item name="android:background">@drawable/card_brown_gradient</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">@dimen/padding_large</item>
+    </style>
+
+    <!-- ==================== 输入框 ==================== -->
+    <style name="EditTextBase">
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:padding">@dimen/padding_normal</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+    </style>
+
+    <style name="EditTextSearch">
+        <item name="android:background">@drawable/edittext_search</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:padding">@dimen/padding_normal</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+    </style>
+
+    <style name="EditTextLarge">
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:textSize">@dimen/text_size_keyword</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+    </style>
+
+    <!-- ==================== 文本 ==================== -->
+    <style name="TextTitle">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSubtitle">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextHero">
+        <item name="android:textSize">@dimen/text_size_hero</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextKeyword">
+        <item name="android:textSize">@dimen/text_size_keyword</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextBody.OnPrimary">
+        <item name="android:textColor">@color/text_on_primary</item>
+    </style>
+
+    <style name="TextSecondary">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextHint">
+        <item name="android:textSize">@dimen/text_size_hint</item>
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+
+    <style name="TextLabel">
+        <item name="android:textSize">@dimen/text_size_micro</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextNav">
+        <item name="android:textSize">@dimen/text_size_nav</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextButton">
+        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ==================== 列表项 ==================== -->
+    <style name="ListItemFriend">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:padding">@dimen/padding_normal</item>
+    </style>
+
+    <style name="ListItemMode">
+        <item name="android:background">@drawable/list_item_mode</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <style name="ListItemSetting">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="ListItemDrawer">
+        <item name="android:background">@drawable/bg_drawer_menu_item</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="ListItemDropdown">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:padding">@dimen/padding_normal</item>
+    </style>
+
+    <!-- ==================== 其他 ==================== -->
+    <style name="ChipFilter">
+        <item name="android:background">@drawable/chip_filter</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:paddingStart">@dimen/padding_normal</item>
+        <item name="android:paddingEnd">@dimen/padding_normal</item>
+        <item name="android:paddingTop">@dimen/padding_tiny</item>
+        <item name="android:paddingBottom">@dimen/padding_tiny</item>
+        <item name="cornerRadius">@dimen/radius_small</item>
+    </style>
+
+    <style name="ChipFilter.Active">
+        <item name="android:background">@drawable/chip_filter_active</item>
+        <item name="android:textColor">@color/text_on_primary</item>
+    </style>
+
+    <style name="BadgeVS">
+        <item name="android:background">@drawable/badge_vs</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">@dimen/vs_badge_size</item>
+        <item name="android:layout_height">@dimen/vs_badge_size</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="Divider.Gold">
+        <item name="android:background">@color/gold</item>
+        <item name="android:layout_height">2dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 邮件详情弹窗布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_margin="16dp">
+
+    <!-- 顶部渐变标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_dialog_header"
+        android:padding="24dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_send"
+            android:layout_marginEnd="12dp"
+            android:tint="@color/white"
+            android:contentDescription="邮件" />
+
+        <TextView
+            android:id="@+id/tv_mail_detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- 内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="400dp"
+        android:background="@drawable/bg_dialog_content"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 发件人和时间 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_people_outline"
+                        android:layout_marginEnd="6dp"
+                        android:tint="@color/poetry_primary"
+                        android:contentDescription="发件人" />
+
+                    <TextView
+                        android:id="@+id/tv_mail_detail_sender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/poetry_text_primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_marginEnd="6dp"
+                        android:tint="@color/poetry_text_secondary"
+                        android:contentDescription="时间" />
+
+                    <TextView
+                        android:id="@+id/tv_mail_detail_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/poetry_text_secondary" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 装饰分割线 -->
+            <View
+                android:layout_width="60dp"
+                android:layout_height="3dp"
+                android:background="@drawable/gradient_divider"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 邮件内容 -->
+            <TextView
+                android:id="@+id/tv_mail_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/poetry_text_primary"
+                android:lineSpacingExtra="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 好友申请处理按钮（type=2 时显示） -->
+    <LinearLayout
+        android:id="@+id/layout_friend_request_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/bg_dialog_footer"
+        android:layout_marginTop="-8dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_accept_friend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="接受"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_primary_bg"
+            android:elevation="2dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btn_reject_friend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="拒绝"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_text_secondary"
+            android:background="@drawable/btn_secondary_bg"
+            android:elevation="2dp"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+
+    <!-- 底部按钮区域（普通邮件使用） -->
+    <LinearLayout
+        android:id="@+id/layout_mail_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="16dp"
+        android:background="@drawable/bg_dialog_footer"
+        android:layout_marginTop="-8dp">
+
+        <Button
+            android:id="@+id/btn_close_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_primary_bg"
+            android:elevation="2dp"
+            android:stateListAnimator="@null"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp" />
+    </LinearLayout>
+
+</LinearLayout>

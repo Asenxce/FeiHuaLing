@@ -1,0 +1,66 @@
+{
+  "single_keyword": {
+    "displayName": "单关键字飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "contains", "keyword": "${keyword}"},
+      {"type": "noRepeat"}
+    ]
+  },
+  "position": {
+    "displayName": "位置飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "position", "keyword": "${keyword}", "position": 0},
+      {"type": "noRepeat"}
+    ]
+  },
+  "double_keyword": {
+    "displayName": "双关键字飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "contains", "keyword": "${keyword}"},
+      {"type": "contains", "keyword": "${keyword2}"},
+      {"type": "noRepeat"}
+    ]
+  },
+  "chain": {
+    "displayName": "首尾接龙飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "chainStart"},
+      {"type": "noRepeat"}
+    ]
+  },
+  "forbidden": {
+    "displayName": "反飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "notContains", "keyword": "${keyword}"},
+      {"type": "noRepeat"}
+    ]
+  },
+  "color": {
+    "displayName": "颜色飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "contains", "keyword": "${keyword}"},
+      {"type": "noRepeat"}
+    ]
+  },
+  "number": {
+    "displayName": "数字飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "contains", "keyword": "${keyword}"},
+      {"type": "noRepeat"}
+    ]
+  },
+  "custom": {
+    "displayName": "自定义飞花令",
+    "rules": [
+      {"type": "minLength", "value": 4},
+      {"type": "noRepeat"}
+    ]
+  }
+}

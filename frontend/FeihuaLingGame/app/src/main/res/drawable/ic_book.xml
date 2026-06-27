@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+
+    <!-- 书卷/竹简背景 -->
+    <path
+        android:fillColor="#D8D0C0"
+        android:pathData="M15,20 L85,20 C88,20 90,22 90,25 L90,75 C90,78 88,80 85,80 L15,80 C12,80 10,78 10,75 L10,25 C10,22 12,20 15,20Z" />
+
+    <!-- 竹简条纹理 -->
+    <path
+        android:fillColor="#C8C0B0"
+        android:strokeColor="#B8B0A0"
+        android:strokeWidth="1"
+        android:pathData="M25,20 L25,80" />
+    <path
+        android:fillColor="#C8C0B0"
+        android:strokeColor="#B8B0A0"
+        android:strokeWidth="1"
+        android:pathData="M40,20 L40,80" />
+    <path
+        android:fillColor="#C8C0B0"
+        android:strokeColor="#B8B0A0"
+        android:strokeWidth="1"
+        android:pathData="M55,20 L55,80" />
+    <path
+        android:fillColor="#C8C0B0"
+        android:strokeColor="#B8B0A0"
+        android:strokeWidth="1"
+        android:pathData="M70,20 L70,80" />
+
+    <!-- 顶部系带（竹青色） -->
+    <path
+        android:fillColor="#5A9A7A"
+        android:pathData="M35,20 L65,20 L60,28 L40,28Z" />
+
+    <!-- 底部系带（竹青色） -->
+    <path
+        android:fillColor="#5A9A7A"
+        android:pathData="M35,80 L65,80 L60,72 L40,72Z" />
+
+    <!-- 左侧文字装饰 -->
+    <path
+        android:fillColor="#2A3A4A"
+        android:pathData="M18,35 L22,35 L22,38 L18,38Z" />
+    <path
+        android:fillColor="#2A3A4A"
+        android:pathData="M18,45 L22,45 L22,48 L18,48Z" />
+    <path
+        android:fillColor="#2A3A4A"
+        android:pathData="M18,55 L22,55 L22,58 L18,58Z" />
+    <path
+        android:fillColor="#2A3A4A"
+        android:pathData="M18,65 L22,65 L22,68 L18,68Z" />
+
+</vector>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 顶部阴影 - 负边距向外 -->
+    <item android:top="-2dp">
+        <shape>
+            <corners
+                android:topLeftRadius="26dp"
+                android:topRightRadius="26dp" />
+            <solid android:color="#082A3A4A" />
+        </shape>
+    </item>
+    
+    <!-- 主体 -->
+    <item>
+        <shape>
+            <corners
+                android:topLeftRadius="24dp"
+                android:topRightRadius="24dp" />
+            <solid android:color="@color/poetry_card_background" />
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/poetry_border" />
+        </shape>
+    </item>
+</layer-list>

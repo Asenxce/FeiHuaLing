@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 经典收藏 - 空心线框图标（未选中状态） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- 书本外框 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineJoin="round"
+        android:pathData="M4,4 L20,4 L20,20 L4,20 Z" />
+    
+    <!-- 书脊 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:pathData="M8,4 L8,20" />
+    
+    <!-- 书页线条1 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:pathData="M12,8 L17,8" />
+    
+    <!-- 书页线条2 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:pathData="M12,12 L17,12" />
+    
+    <!-- 书页线条3 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:pathData="M12,16 L17,16" />
+    
+</vector>

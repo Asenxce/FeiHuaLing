@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/apk/res/android">
+    <!-- 飞花令 古风主题 — 宣纸墨韵 -->
+    <style name="Base.Theme.FeihuaLingGame" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorPrimaryVariant">@color/gold_dark</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorSecondary">@color/ink_medium</item>
+        <item name="colorSecondaryVariant">@color/ink</item>
+        <item name="colorOnSecondary">@color/text_on_primary</item>
+        <item name="android:windowBackground">@color/paper</item>
+        <item name="backgroundColor">@color/paper</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/paper</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/paper</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:colorControlHighlight">@color/gold_light</item>
+        <item name="colorControlHighlight">@color/gold_light</item>
+    </style>
+
+    <style name="Theme.FeihuaLingGame" parent="Base.Theme.FeihuaLingGame" />
+
+    <style name="Theme.FeihuaLingGame.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FeihuaLingGame.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.FeihuaLingGame.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- 头像裁剪页面专用主题 — 全屏沉浸式黑色背景 -->
+    <style name="Theme.FeihuaLingGame.CircleCrop">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">#FF000000</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#FF000000</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">#FF000000</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o">false</item>
+    </style>
+</resources>

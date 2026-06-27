@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 飞花令 古风色彩体系 — 夜间模式 深色宣纸 -->
+<resources>
+    <!-- ===== 品牌色 (夜间提亮) ===== -->
+    <color name="gold">#C8A868</color>
+    <color name="gold_light">#DEC8A0</color>
+    <color name="gold_dark">#A07848</color>
+
+    <!-- 辅色 -->
+    <color name="ink">#E0D8D0</color>
+    <color name="ink_medium">#B0A898</color>
+    <color name="ink_light">#787068</color>
+
+    <!-- 强调色 -->
+    <color name="vermilion">#D06858</color>
+    <color name="vermilion_dark">#A04838</color>
+
+    <!-- ===== 中性色 ===== -->
+    <color name="paper">#1E1A18</color>
+    <color name="paper_dark">#282420</color>
+    <color name="paper_warm">#24201C</color>
+
+    <color name="surface">#2A2622</color>
+    <color name="surface_warm">#2E2A26</color>
+
+    <color name="border">#3A3630</color>
+    <color name="divider">#322E28</color>
+
+    <!-- ===== 语义色 ===== -->
+    <color name="success">#5B8B5A</color>
+    <color name="warning">#C8A44A</color>
+    <color name="error">#D06858</color>
+    <color name="online">#6BA368</color>
+
+    <!-- ===== 文本色 ===== -->
+    <color name="text_primary">#E8E0D8</color>
+    <color name="text_secondary">#A09890</color>
+    <color name="text_hint">#706860</color>
+    <color name="text_on_primary">#1E1A18</color>
+
+    <!-- ===== 基础色 ===== -->
+    <color name="white">#E8E0D8</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- ========================================================= -->
+    <!-- 兼容性别名 -->
+    <!-- ========================================================= -->
+    <color name="brown_dark">@color/ink</color>
+    <color name="brown_medium">@color/ink_medium</color>
+    <color name="brown_light">@color/ink_light</color>
+    <color name="brown_muted">@color/text_hint</color>
+    <color name="cream">@color/paper</color>
+    <color name="warm_gray">@color/paper_dark</color>
+    <color name="light_gray">@color/divider</color>
+    <color name="gray_text">@color/text_secondary</color>
+    <color name="gray_dark">@color/ink_medium</color>
+    <color name="red_accent">@color/vermilion</color>
+    <color name="red_dark">@color/vermilion_dark</color>
+    <color name="green_online">@color/online</color>
+    <color name="success_green">@color/success</color>
+    <color name="error_red">@color/error</color>
+
+    <color name="poetry_primary">@color/gold</color>
+    <color name="poetry_primary_dark">@color/gold_dark</color>
+    <color name="poetry_primary_darker">@color/paper</color>
+    <color name="poetry_text_primary">@color/text_primary</color>
+    <color name="poetry_text_secondary">@color/text_secondary</color>
+    <color name="poetry_text_hint">@color/text_hint</color>
+    <color name="poetry_background">@color/paper</color>
+    <color name="poetry_accent">@color/paper_dark</color>
+    <color name="poetry_accent_dark">@color/ink_light</color>
+    <color name="poetry_gold">@color/gold</color>
+    <color name="poetry_paper">@color/paper</color>
+    <color name="poetry_purple">@color/paper_dark</color>
+    <color name="poetry_purple_light">@color/ink_light</color>
+    <color name="poetry_purple_dark">@color/paper</color>
+    <color name="poetry_sakura">@color/gold_light</color>
+    <color name="poetry_card_background">@color/paper_dark</color>
+    <color name="poetry_card_alt">@color/paper_dark</color>
+    <color name="poetry_border">@color/border</color>
+    <color name="poetry_divider">@color/divider</color>
+    <color name="poetry_bamboo">@color/success</color>
+    <color name="poetry_seal">@color/vermilion</color>
+    <color name="poetry_vermilion">@color/vermilion</color>
+    <color name="poetry_ink">@color/text_primary</color>
+    <color name="poetry_ink_light">@color/surface</color>
+    <color name="poetry_purple_deeper">@color/ink_light</color>
+    <color name="poetry_text_tertiary">@color/text_hint</color>
+    <color name="poetry_text_on_dark">@color/text_primary</color>
+    <color name="loading_bg_color">@color/ink_medium</color>
+    <color name="gradient_start">@color/gold</color>
+    <color name="gradient_middle">@color/gold</color>
+    <color name="gradient_end">@color/gold</color>
+    <color name="win_green">@color/success</color>
+    <color name="loss_red">@color/error</color>
+    <color name="chip_background">@color/paper_dark</color>
+
+    <color name="brown_dark_night">@color/paper</color>
+    <color name="brown_medium_night">@color/paper_dark</color>
+    <color name="brown_light_night">@color/ink_light</color>
+    <color name="gold_night">@color/gold</color>
+    <color name="gold_light_night">@color/gold_light</color>
+    <color name="gold_dark_night">@color/gold_dark</color>
+    <color name="cream_night">@color/paper</color>
+    <color name="warm_gray_night">@color/paper_dark</color>
+    <color name="text_primary_night">@color/text_primary</color>
+    <color name="text_secondary_night">@color/text_secondary</color>
+    <color name="text_hint_night">@color/text_hint</color>
+    <color name="win_green_night">@color/success</color>
+    <color name="loss_red_night">@color/error</color>
+    <color name="divider_night">@color/divider</color>
+    <color name="border_night">@color/border</color>
+    <color name="card_white_night">@color/surface</color>
+    <color name="card_cream_night">@color/paper_dark</color>
+    <color name="light_gray_night">@color/ink_medium</color>
+    <color name="gray_text_night">@color/text_secondary</color>
+</resources>

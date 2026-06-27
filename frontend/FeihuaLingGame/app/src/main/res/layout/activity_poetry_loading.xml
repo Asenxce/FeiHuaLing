@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading_background_gradient">
+
+    <!-- 主内容区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingTop="80dp"
+        android:paddingBottom="48dp">
+
+        <!-- ═══ 顶部：图标 + 光晕 ═══ -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="36dp">
+
+            <!-- 光晕背景 -->
+            <ImageView
+                android:id="@+id/iv_icon_glow"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/loading_icon_glow"
+                android:alpha="0.7"
+                android:contentDescription="光晕" />
+
+            <!-- 扇子图标 -->
+            <ImageView
+                android:id="@+id/iv_loading_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_fan"
+                android:contentDescription="加载图标"
+                android:alpha="0.9" />
+        </FrameLayout>
+
+        <!-- ═══ 标题区域 ═══ -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="36dp">
+
+            <!-- 左装饰线 -->
+            <View
+                android:id="@+id/v_deco_line_left"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gold_light"
+                android:alpha="0.4"
+                android:layout_marginEnd="16dp" />
+
+            <!-- 标题文字 -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在筹备「花」字对决"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@color/gold_dark"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:fontFamily="serif" />
+
+            <!-- 右装饰线 -->
+            <View
+                android:id="@+id/v_deco_line_right"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gold_light"
+                android:alpha="0.4"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- ═══ 诗词预览卡片 ═══ -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="48dp">
+
+            <!-- 卡片主体 -->
+            <LinearLayout
+                android:id="@+id/card_poetry_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/poetry_preview_card_v2"
+                android:paddingHorizontal="28dp"
+                android:paddingVertical="24dp"
+                android:gravity="center">
+
+                <!-- 诗词内容 -->
+                <TextView
+                    android:id="@+id/tv_poetry_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="春眠不觉晓，处处闻啼鸟"
+                    android:textSize="18sp"
+                    android:textColor="@color/ink"
+                    android:gravity="center"
+                    android:lineSpacingExtra="8dp"
+                    android:fontFamily="serif"
+                    android:letterSpacing="0.06" />
+
+                <!-- 诗词来源装饰 -->
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/gold_light"
+                    android:alpha="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_poetry_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—— 唐·孟浩然《春晓》"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_hint"
+                    android:fontFamily="serif"
+                    android:letterSpacing="0.03" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- ═══ 进度区域 ═══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- 进度条 -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:progressDrawable="@drawable/loading_progress_bar_v2"
+                android:max="100"
+                android:progress="0" />
+
+            <!-- 进度信息行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:id="@+id/tv_loading_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="正在连接诗词库..."
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gold"
+                    android:fontFamily="serif" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ═══ 弹性空间 ═══ -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- ═══ 底部引言 ═══ -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="20dp">
+
+            <!-- 上方细线装饰 -->
+            <View
+                android:layout_width="48dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/gold_light"
+                android:alpha="0.35" />
+
+            <!-- 引号 + 文字 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="诗词对决，一触即发"
+                android:textSize="13sp"
+                android:textColor="@color/ink_light"
+                android:gravity="center"
+                android:fontFamily="serif"
+                android:alpha="0.7"
+                android:letterSpacing="0.08" />
+
+            <!-- 下方细线装饰 -->
+            <View
+                android:layout_width="48dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/gold_light"
+                android:alpha="0.35" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

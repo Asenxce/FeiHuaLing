@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/poetry_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/poetry_card_background"
+        android:elevation="4dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="14dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_arrow_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="自定义飞花令"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_text_primary"
+            android:gravity="center"
+            android:layout_marginEnd="36dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 卡片1: 关键字设置 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="14dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_keyword_card"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关键字设置"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/poetry_text_primary" />
+                </LinearLayout>
+
+                <!-- 关键字个数选择 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关键字个数"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:id="@+id/chip_kw_count_1"
+                        android:layout_width="60dp"
+                        android:layout_height="32dp"
+                        android:text="1个"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:background="@drawable/chip_filter_active"
+                        android:textColor="@color/text_on_primary"
+                        android:clickable="true" />
+
+                    <TextView
+                        android:id="@+id/chip_kw_count_2"
+                        android:layout_width="60dp"
+                        android:layout_height="32dp"
+                        android:text="2个"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:background="@drawable/chip_filter"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:layout_marginStart="8dp"
+                        android:clickable="true" />
+                </LinearLayout>
+
+                <!-- 关键字①（始终显示） -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关键字"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:layout_marginEnd="12dp" />
+
+                    <EditText
+                        android:id="@+id/et_keyword1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="春"
+                        android:textSize="16sp"
+                        android:textColor="@color/poetry_text_primary"
+                        android:textColorHint="@color/poetry_text_hint"
+                        android:background="@drawable/edit_text_background"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:maxLength="4"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- 关键字②（按个数显示） -->
+                <LinearLayout
+                    android:id="@+id/ll_keyword2_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关键字②"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:layout_marginEnd="12dp" />
+
+                    <EditText
+                        android:id="@+id/et_keyword2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textColor="@color/poetry_text_primary"
+                        android:textColorHint="@color/poetry_text_hint"
+                        android:background="@drawable/edit_text_background"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:maxLength="4"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- 关键字位置（动态显示） -->
+                <LinearLayout
+                    android:id="@+id/ll_position_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关键字位置"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:layout_marginBottom="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/chip_pos_1"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:text="1"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/chip_filter_active"
+                            android:textColor="@color/text_on_primary"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/chip_pos_2"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:text="2"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/chip_filter"
+                            android:textColor="@color/poetry_text_secondary"
+                            android:layout_marginStart="6dp"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/chip_pos_3"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:text="3"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/chip_filter"
+                            android:textColor="@color/poetry_text_secondary"
+                            android:layout_marginStart="6dp"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/chip_pos_4"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:text="4"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/chip_filter"
+                            android:textColor="@color/poetry_text_secondary"
+                            android:layout_marginStart="6dp"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/chip_pos_5"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:text="5"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/chip_filter"
+                            android:textColor="@color/poetry_text_secondary"
+                            android:layout_marginStart="6dp"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/chip_pos_6"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:text="6"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/chip_filter"
+                            android:textColor="@color/poetry_text_secondary"
+                            android:layout_marginStart="6dp"
+                            android:clickable="true" />
+
+                        <TextView
+                            android:id="@+id/chip_pos_7"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:text="7"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/chip_filter"
+                            android:textColor="@color/poetry_text_secondary"
+                            android:layout_marginStart="6dp"
+                            android:clickable="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 卡片2: 规则选择 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="14dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_keyword_card"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="验证规则"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/poetry_text_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（勾选即启用）"
+                        android:textSize="12sp"
+                        android:textColor="@color/poetry_text_hint"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_rule_toggles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- 长度限制设置（动态显示） -->
+                <LinearLayout
+                    android:id="@+id/ll_max_length_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginBottom="12dp"
+                    android:paddingStart="46dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:background="@drawable/edit_text_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最大字数"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:layout_marginEnd="10dp" />
+
+                    <EditText
+                        android:id="@+id/et_max_length"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textSize="15sp"
+                        android:textColor="@color/poetry_text_primary"
+                        android:textColorHint="@color/poetry_text_hint"
+                        android:background="@android:color/transparent"
+                        android:padding="6dp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="字"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_hint"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+                <!-- 最小长度设置（动态显示） -->
+                <LinearLayout
+                    android:id="@+id/ll_min_length_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginBottom="12dp"
+                    android:paddingStart="46dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:background="@drawable/edit_text_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最小字数"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_secondary"
+                        android:layout_marginEnd="10dp" />
+
+                    <EditText
+                        android:id="@+id/et_min_length"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textSize="15sp"
+                        android:textColor="@color/poetry_text_primary"
+                        android:textColorHint="@color/poetry_text_hint"
+                        android:background="@android:color/transparent"
+                        android:padding="6dp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="字"
+                        android:textSize="13sp"
+                        android:textColor="@color/poetry_text_hint"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/poetry_divider"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_rule_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/poetry_primary"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_conflict_warn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/error_red"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="勾选规则后，引擎将自动组装验证链。游戏中你的每句回答都将依次经过这些规则检验。"
+                    android:textSize="11sp"
+                    android:textColor="@color/poetry_text_hint" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/poetry_card_background"
+        android:elevation="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="开始自定义对战"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_on_primary"
+            android:background="@drawable/btn_primary_bg" />
+    </LinearLayout>
+
+</LinearLayout>

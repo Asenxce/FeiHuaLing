@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/card_white"
+    android:layout_marginBottom="4dp">
+
+    <TextView
+        android:id="@+id/tv_verse_player"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="玩家"
+        android:textSize="13sp"
+        android:textColor="@color/poetry_text_primary"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/tv_verse_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="诗句内容"
+        android:textSize="13sp"
+        android:textColor="@color/poetry_text_secondary"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/tv_verse_result"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:text="✓"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@drawable/bg_zen_gradient">
+
+    <!-- Logo区 -->
+    <ImageView
+        android:id="@+id/tvLogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_fan"
+        android:contentDescription="飞花令Logo"
+        android:layout_marginBottom="28dp"
+        android:elevation="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/logo_click_ripple" />
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="飞花令对战"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/poetry_text_primary"
+        android:gravity="center"
+        android:letterSpacing="0.15"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 副标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="以诗会友，妙笔生花"
+        android:textSize="14sp"
+        android:textColor="@color/poetry_text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <!-- 用户名输入框 -->
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="用户名"
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"
+        android:textSize="15sp"
+        android:textColor="@color/poetry_text_primary"
+        android:textColorHint="@color/poetry_text_secondary"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 密码输入框 -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_text_background"
+        android:textSize="15sp"
+        android:textColor="@color/poetry_text_primary"
+        android:textColorHint="@color/poetry_text_secondary"
+        android:padding="16dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 登录按钮 -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登 录"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_on_primary"
+        android:background="@drawable/btn_primary_bg"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        android:padding="18dp"
+        android:layout_marginBottom="18dp" />
+
+    <!-- 注册链接 -->
+    <TextView
+        android:id="@+id/tv_register_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="还没有账号？前往注册 →"
+        android:textSize="14sp"
+        android:textColor="@color/poetry_primary"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp" />
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 图片读取权限（Android 13以下） -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- 图片读取权限（Android 13及以上） -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".FeihuaLingGameApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FeihuaLingGame"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <!-- 欢迎页（默认启动） -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.FeihuaLingGame.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 首页 -->
+        <activity
+            android:name=".activity.HomeActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.FeihuaLingGame.NoActionBar" />
+
+        <!-- 主页面 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 登录页 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 战斗页面 -->
+        <activity
+            android:name=".activity.BattleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 邮箱页面 -->
+        <activity
+            android:name=".activity.MailboxActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 游戏模式选择 -->
+        <activity
+            android:name=".activity.GameModeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 关键字选择 -->
+        <activity
+            android:name=".activity.KeywordSelectActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 关键字输入（人机对战自定义关键字） -->
+        <activity
+            android:name=".activity.KeywordInputActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 诗词加载等待界面（全屏沉浸式） -->
+        <activity
+            android:name=".activity.PoetryLoadingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FeihuaLingGame.NoActionBar" />
+
+        <!-- 诗词查询 -->
+        <activity
+            android:name=".activity.PoetryQueryActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 诗词详情 -->
+        <activity
+            android:name=".activity.PoetryDetailActivity"
+            android:exported="false" />
+
+        <!-- 个人资料 -->
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="false" />
+
+        <!-- 圆形头像裁剪 -->
+        <activity
+            android:name=".activity.CircleCropActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FeihuaLingGame.CircleCrop" />
+
+        <!-- 编辑个人资料 -->
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 系统设置 -->
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 规则详情 -->
+        <activity
+            android:name=".activity.RulesActivity"
+            android:exported="false" />
+
+        <!-- 规则引擎配置 -->
+        <activity
+            android:name=".activity.RuleEngineConfigActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 注册页面 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 结果展示 -->
+        <activity
+            android:name=".activity.ResultActivity"
+            android:exported="false" />
+
+        <!-- 多人约战菜单 -->
+        <activity
+            android:name=".activity.MultiRoomMenuActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 多人房间创建 -->
+        <activity
+            android:name=".activity.MultiRoomCreateActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 多人房间等待大厅 -->
+        <activity
+            android:name=".activity.MultiRoomActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 多人对战 -->
+        <activity
+            android:name=".activity.MultiBattleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 个人战绩 -->
+        <activity
+            android:name=".activity.RecordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+    </application>
+
+</manifest>

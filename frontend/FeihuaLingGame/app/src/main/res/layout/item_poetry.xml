@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_poetry_item"
+    android:elevation="6dp"
+    android:layout_margin="10dp"
+    android:padding="20dp">
+
+    <!-- 作者朝代 -->
+    <TextView
+        android:id="@+id/tv_poetry_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/poetry_text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="4dp" />
+
+    <!-- 诗词标题 -->
+    <TextView
+        android:id="@+id/tv_poetry_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/poetry_primary"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/poetry_divider"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 诗词内容 -->
+    <TextView
+        android:id="@+id/tv_poetry_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/poetry_ink"
+        android:lineSpacingMultiplier="1.6"
+        android:gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 底色 -->
+    <item>
+        <color android:color="@color/poetry_background" />
+    </item>
+    <!-- 极淡纹理（移除不兼容的 opacity 属性） -->
+    <item>
+        <bitmap
+            android:src="@drawable/ic_ink_wash"
+            android:tileMode="repeat"
+            android:alpha="0.05" />
+    </item>
+</layer-list>

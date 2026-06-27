@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 极简淡墨纹理模拟 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:fillColor="@color/poetry_divider"
+        android:pathData="M0,0 L64,0 L64,64 L0,64 Z" />
+    <path
+        android:fillColor="@color/poetry_card_background"
+        android:pathData="M10,10 Q20,5 30,15 T50,20" />
+    <path
+        android:fillColor="#F0EBE3"
+        android:pathData="M5,30 Q15,35 25,25 T45,35" />
+    <path
+        android:fillColor="@color/poetry_card_background"
+        android:pathData="M15,50 Q25,45 35,55 T55,50" />
+</vector>

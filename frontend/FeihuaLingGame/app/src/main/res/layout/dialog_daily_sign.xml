@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_rounded"
+    android:padding="12dp">
+
+    <!-- 顶部标题区域（带收藏按钮） -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_star_filled"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="装饰" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每日诗签"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_primary" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_star_filled"
+                android:layout_marginStart="6dp"
+                android:contentDescription="装饰" />
+        </LinearLayout>
+
+        <!-- 收藏按钮（右侧） -->
+        <ImageView
+            android:id="@+id/iv_sign_favorite"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_star_outline"
+            android:contentDescription="收藏诗词"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <!-- 刷新按钮（收藏左侧） -->
+        <ImageView
+            android:id="@+id/iv_sign_refresh"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_toStartOf="@id/iv_sign_favorite"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_refresh"
+            android:contentDescription="换一首"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </RelativeLayout>
+
+    <!-- 诗词内容区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="8dp">
+
+        <!-- 诗词标题 -->
+        <TextView
+            android:id="@+id/tv_sign_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《静夜思》"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_primary"
+            android:layout_marginBottom="6dp" />
+
+        <!-- 作者和朝代 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_sign_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李白"
+                android:textSize="14sp"
+                android:textColor="@color/poetry_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" · "
+                android:textSize="14sp"
+                android:textColor="@color/poetry_text_secondary" />
+
+            <TextView
+                android:id="@+id/tv_sign_dynasty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="唐"
+                android:textSize="14sp"
+                android:textColor="@color/poetry_text_secondary" />
+        </LinearLayout>
+
+        <!-- 分隔线 -->
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="@drawable/gradient_divider"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 诗词内容（可滚动，自适应高度） -->
+        <ScrollView
+            android:id="@+id/scroll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="160dp"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="true"
+            android:scrollbarStyle="outsideOverlay"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_sign_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="床前明月光，疑是地上霜。\n举头望明月，低头思故乡。"
+                android:textSize="15sp"
+                android:textColor="@color/poetry_text_primary"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center" />
+        </ScrollView>
+
+        <!-- 分隔线 -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:background="@color/poetry_divider"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 关闭按钮 -->
+        <Button
+            android:id="@+id/btn_sign_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="收下今日好签"
+            android:textSize="14sp"
+            android:textColor="@color/text_on_primary"
+            android:background="@drawable/btn_primary_bg"
+            android:paddingVertical="10dp" />
+    </LinearLayout>
+
+    <!-- 今日不再显示 -->
+    <CheckBox
+        android:id="@+id/cb_no_show_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今日不再显示"
+        android:textSize="13sp"
+        android:textColor="@color/poetry_text_secondary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

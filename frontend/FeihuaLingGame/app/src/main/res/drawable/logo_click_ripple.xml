@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo专用圆形波纹效果 -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#1A6A7A8A">
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="#1A6A7A8A" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</ripple>

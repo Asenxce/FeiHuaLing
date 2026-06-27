@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 诗词查询 - 空心线框图标（未选中状态） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- 文档外框 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M6,2 L18,2 L18,22 L6,22 Z" />
+    
+    <!-- 顶部横线 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:pathData="M9,6 L15,6" />
+    
+    <!-- 中间横线 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:pathData="M9,10 L15,10" />
+    
+    <!-- 底部横线 -->
+    <path
+        android:strokeColor="@color/poetry_text_primary"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:pathData="M9,14 L13,14" />
+    
+</vector>

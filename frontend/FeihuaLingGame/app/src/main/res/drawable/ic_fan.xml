@@ -1,0 +1,84 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="120dp"
+    android:width="120dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+
+    <!-- 外层扇面（装饰边框）- 120度扇形，pivot在(50,90)，半径50 -->
+    <path
+        android:fillColor="#D8D0C0"
+        android:pathData="M50,90 L93.3,65 A50,50 0 0,0 6.7,65 Z" />
+    
+    <!-- 内层扇面（宣纸色）- 120度扇形，pivot在(50,90)，半径47 -->
+    <path
+        android:fillColor="#F5F0E6"
+        android:strokeColor="#C8C0B0"
+        android:strokeWidth="1"
+        android:pathData="M50,89 L90.15,66.77 A47,47 0 0,0 9.85,66.77 Z" />
+    
+    <!-- 扇面装饰花纹（顶部云纹） -->
+    <path
+        android:strokeColor="#D8D0C0"
+        android:strokeWidth="0.8"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M37,52 Q43,48 49,52 Q50,50 51,52 Q57,48 63,52" />
+    
+    <!-- 主扇骨（中心） -->
+    <path
+        android:strokeColor="#C8C0B0"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M50,90 L50,40" />
+    
+    <!-- 次扇骨（左右对称辐射，120度分布：从-60度到+60度） -->
+    <path
+        android:strokeColor="#D8D0C0"
+        android:strokeWidth="1"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M50,90 L90.7,66.5 M50,90 L9.3,66.5 M50,90 L80.4,56.2 M50,90 L19.6,56.2 M50,90 L69.1,48.5 M50,90 L30.9,48.5 M50,90 L57.3,43.8 M50,90 L42.7,43.8" />
+    
+    <!-- 左侧竹叶（禅意风格·提升饱和度） -->
+    <path
+        android:fillColor="#5A9A7A"
+        android:pathData="M28,55 Q32,52 35,55 Q32,58 28,55Z" />
+    <path
+        android:fillColor="#4A8A6A"
+        android:pathData="M25,58 Q29,55 32,58 Q29,61 25,58Z" />
+    <path
+        android:fillColor="#5A9A7A"
+        android:pathData="M32,60 Q35,57 38,60 Q35,63 32,60Z" />
+    <!-- 竹节 -->
+    <path
+        android:strokeColor="#C8C0B0"
+        android:strokeWidth="1"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M30,55 L30,63" />
+    
+    <!-- 右侧飘落竹叶 -->
+    <path
+        android:fillColor="#5A9A7A"
+        android:pathData="M73,50 Q76,47 79,50 Q76,53 73,50Z" />
+    <path
+        android:fillColor="#4A8A6A"
+        android:pathData="M79,64 Q82,61 85,64 Q82,67 79,64Z" />
+    <path
+        android:fillColor="#5A9A7A"
+        android:pathData="M69,58 Q71,55 74,58 Q71,61 69,58Z" />
+    <path
+        android:fillColor="#4A8A6A"
+        android:pathData="M84,54 Q86,51 88,54 Q86,57 84,54Z" />
+    
+    <!-- 底部扇钉 -->
+    <path
+        android:fillColor="#C8C0B0"
+        android:pathData="M50,87 A3,3 0 1,1 50,93 A3,3 0 1,1 50,87Z" />
+    <path
+        android:fillColor="#B8B0A0"
+        android:pathData="M50,88.5 A1.5,1.5 0 1,1 50,91.5 A1.5,1.5 0 1,1 50,88.5Z" />
+    
+    <!-- 扇柄 -->
+    <path
+        android:fillColor="#C8C0B0"
+        android:pathData="M47,92 L53,92 L53,98 L47,98Z" />
+
+</vector>

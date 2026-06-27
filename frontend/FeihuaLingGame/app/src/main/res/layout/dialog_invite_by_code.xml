@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_card_rounded">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_battle_outline"
+        android:tint="@color/gold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="输入身份码"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/poetry_text_primary"
+        android:gravity="center"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入对方的 8 位身份码"
+        android:textSize="13sp"
+        android:textColor="@color/poetry_text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/et_user_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="例如：12345678"
+        android:inputType="number"
+        android:maxLength="8"
+        android:background="@drawable/edit_text_background_animated"
+        android:textSize="22sp"
+        android:textColor="@color/poetry_text_primary"
+        android:textColorHint="@color/poetry_text_secondary"
+        android:padding="14dp"
+        android:gravity="center"
+        android:letterSpacing="0.35"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btn_confirm_invite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确认"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_primary_bg"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        android:padding="16dp" />
+
+</LinearLayout>

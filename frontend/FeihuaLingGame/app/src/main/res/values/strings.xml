@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">飞花令</string>
+
+    <!-- 通用 -->
+    <string name="btn_back">返回</string>
+    <string name="btn_confirm">确定</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_search">搜索</string>
+    <string name="loading">加载中…</string>
+    <string name="network_error">网络异常，请检查连接</string>
+    <string name="no_data">暂无数据</string>
+
+    <!-- 登录注册 -->
+    <string name="login_title">飞花令游戏</string>
+    <string name="login_username_hint">请输入用户名</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="register_title">注册</string>
+    <string name="register_nickname_hint">请输入昵称</string>
+    <string name="register_success">注册成功</string>
+
+    <!-- 游戏模式 -->
+    <string name="mode_single_keyword">单关键字飞花令</string>
+    <string name="mode_position">位置飞花令</string>
+    <string name="mode_double_keyword">双关键字飞花令</string>
+    <string name="mode_chain">首尾接龙飞花令</string>
+    <string name="mode_color">颜色飞花令</string>
+    <string name="mode_number">数字飞花令</string>
+    <string name="mode_forbidden">反飞花令</string>
+    <string name="mode_select_title">选择对战模式</string>
+
+    <!-- 对战 -->
+    <string name="battle_title_ai">人机对战</string>
+    <string name="battle_title_friend">好友对战</string>
+    <string name="battle_submit_hint">请输入诗句</string>
+    <string name="battle_waiting">等待中…</string>
+    <string name="battle_your_turn">轮到你了</string>
+    <string name="battle_ai_turn">AI思考中…</string>
+    <string name="battle_opponent_turn">对手思考中…</string>
+    <string name="battle_win">你赢了！</string>
+    <string name="battle_lose">你输了</string>
+    <string name="battle_timeout">时间到</string>
+    <string name="battle_exit_confirm">确定要退出对战吗？</string>
+
+    <!-- 诗词查询 -->
+    <string name="poetry_query_title">诗词查询</string>
+    <string name="poetry_search_hint">输入关键字、作者或标题</string>
+    <string name="poetry_search_by_keyword">关键字搜索</string>
+    <string name="poetry_search_by_author">作者搜索</string>
+    <string name="poetry_search_by_title">标题搜索</string>
+
+    <!-- 好友 -->
+    <string name="friend_title">好友</string>
+    <string name="friend_add">添加好友</string>
+    <string name="friend_delete_confirm">确定删除该好友？</string>
+
+    <!-- 收藏 -->
+    <string name="collection_title">我的收藏</string>
+    <string name="collection_empty">还没有收藏诗句</string>
+
+    <!-- 规则 -->
+    <string name="rules_title">规则详情</string>
+    <string name="rules_back">返回</string>
+
+    <!-- 个人中心 -->
+    <string name="profile_title">个人中心</string>
+    <string name="profile_logout">退出登录</string>
+    <string name="profile_logout_confirm">确定要退出登录吗？</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_sound">音效</string>
+    <string name="settings_music">背景音乐</string>
+
+    <!-- 验证消息 -->
+    <string name="validate_empty">答案不能为空</string>
+    <string name="validate_too_short">请输入完整的诗句（至少4个字）</string>
+    <string name="validate_duplicate">这句诗已经使用过了，请换一句</string>
+    <string name="validate_keyword_missing">答案必须包含关键字</string>
+    <string name="validate_not_in_library">该诗句不在诗库中，请检查是否正确</string>
+</resources>

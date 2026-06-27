@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 邮件列表项 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_background"
+    android:elevation="2dp"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- 类型图标 -->
+    <ImageView
+        android:id="@+id/tv_mail_type_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_send"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="邮件" />
+
+    <!-- 邮件信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- 标题和未读红点 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_mail_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="邮件标题"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_text_primary"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- 未读红点 -->
+            <View
+                android:id="@+id/view_unread_dot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/btn_primary_bg"
+                android:visibility="gone"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- 发件人和时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/tv_mail_sender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="系统"
+                android:textSize="12sp"
+                android:textColor="@color/poetry_text_secondary" />
+
+            <TextView
+                android:id="@+id/tv_mail_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024-01-01"
+                android:textSize="12sp"
+                android:textColor="@color/poetry_text_secondary" />
+        </LinearLayout>
+
+        <!-- 内容预览 -->
+        <TextView
+            android:id="@+id/tv_mail_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="邮件内容预览..."
+            android:textSize="13sp"
+            android:textColor="@color/poetry_text_secondary"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 诗词预览卡片 — 古风宣纸质感（夜间模式） -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 外层阴影 -->
+    <item android:bottom="4dp" android:left="2dp" android:right="2dp" android:top="2dp">
+        <shape>
+            <corners android:radius="@dimen/radius_large" />
+            <solid android:color="#1A000000" />
+        </shape>
+    </item>
+    
+    <!-- 主体卡片 -->
+    <item>
+        <shape>
+            <corners android:radius="@dimen/radius_large" />
+            <solid android:color="@color/surface" />
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/border" />
+        </shape>
+    </item>
+</layer-list>

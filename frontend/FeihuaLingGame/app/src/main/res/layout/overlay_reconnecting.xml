@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_reconnecting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_reconnect_overlay"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:background="@drawable/bg_reconnect_dialog"
+        android:elevation="8dp">
+
+        <ProgressBar
+            android:id="@+id/pb_reconnecting"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:indeterminateTint="@color/gold" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络连接中断"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在尝试重新连接..."
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_timeout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="@color/error"
+            android:layout_marginTop="12dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_reconnect_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="退出对局"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:background="@drawable/btn_outline_bg"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</FrameLayout>

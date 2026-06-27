@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 飞花令 古风色彩体系 — 宣纸墨韵 金边点缀 -->
+<resources>
+    <!-- ===== 品牌色 (3色) ===== -->
+    <!-- 主色：古铜金 — 用于标题、关键字、强调 -->
+    <color name="gold">#B89B5E</color>
+    <color name="gold_light">#D4C090</color>
+    <color name="gold_dark">#8B6D3A</color>
+
+    <!-- 辅色：墨褐 — 用于正文、图标、边框 -->
+    <color name="ink">#3C3228</color>
+    <color name="ink_medium">#5C5044</color>
+    <color name="ink_light">#8C7E70</color>
+
+    <!-- 强调色：朱砂红 — 用于警告、删除、徽章 -->
+    <color name="vermilion">#B84B3A</color>
+    <color name="vermilion_dark">#8B3628</color>
+
+    <!-- ===== 中性色 (背景/表面) ===== -->
+    <!-- 宣纸色 — 主背景 -->
+    <color name="paper">#FAF6EE</color>
+    <color name="paper_dark">#F2ECE0</color>
+    <color name="paper_warm">#F5EFE4</color>
+
+    <!-- 表面色 — 卡片/弹窗 -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_warm">#FDFAF4</color>
+
+    <!-- 分割色 -->
+    <color name="border">#DDD5C8</color>
+    <color name="divider">#EBE4D8</color>
+
+    <!-- ===== 语义色 ===== -->
+    <color name="success">#5B8B5A</color>          <!-- 玉绿 — 成功 -->
+    <color name="warning">#C8A44A</color>          <!-- 琥珀 — 警告 -->
+    <color name="error">#B84B3A</color>            <!-- 朱砂 — 错误 -->
+    <color name="online">#6BA368</color>           <!-- 在线状态 -->
+
+    <!-- ===== 文本色 ===== -->
+    <color name="text_primary">#3C3228</color>     <!-- 墨色 主文字 -->
+    <color name="text_secondary">#7A6E62</color>   <!-- 灰色 辅助文字 -->
+    <color name="text_hint">#A89B8E</color>        <!-- 淡灰 占位提示 -->
+    <color name="text_on_primary">#FFFFFF</color>  <!-- 深色底上文字 -->
+
+    <!-- ===== 基础色 ===== -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- ========================================================= -->
+    <!-- 兼容性别名 (所有旧引用映射到新色彩体系) -->
+    <!-- ========================================================= -->
+
+    <!-- 旧 purple 系列 → 新中性色 -->
+    <color name="brown_dark">@color/ink</color>
+    <color name="brown_medium">@color/ink_medium</color>
+    <color name="brown_light">@color/ink_light</color>
+    <color name="brown_muted">@color/text_hint</color>
+    <color name="cream">@color/paper</color>
+    <color name="warm_gray">@color/paper_dark</color>
+    <color name="light_gray">@color/divider</color>
+    <color name="gray_text">@color/text_secondary</color>
+    <color name="gray_dark">@color/ink_medium</color>
+    <color name="red_accent">@color/vermilion</color>
+    <color name="red_dark">@color/vermilion_dark</color>
+    <color name="green_online">@color/online</color>
+    <color name="success_green">@color/success</color>
+    <color name="error_red">@color/error</color>
+
+    <!-- 旧 poetry_ 系列兼容别名 -->
+    <color name="poetry_primary">@color/gold</color>
+    <color name="poetry_primary_dark">@color/gold_dark</color>
+    <color name="poetry_primary_darker">@color/ink</color>
+    <color name="poetry_text_primary">@color/text_primary</color>
+    <color name="poetry_text_secondary">@color/text_secondary</color>
+    <color name="poetry_text_hint">@color/text_hint</color>
+    <color name="poetry_text_tertiary">@color/ink_light</color>
+    <color name="poetry_text_on_dark">@color/text_on_primary</color>
+    <color name="poetry_background">@color/paper</color>
+    <color name="poetry_accent">@color/ink_medium</color>
+    <color name="poetry_accent_dark">@color/ink</color>
+    <color name="poetry_gold">@color/gold</color>
+    <color name="poetry_paper">@color/paper</color>
+    <color name="poetry_purple">@color/ink_medium</color>
+    <color name="poetry_purple_light">@color/ink_light</color>
+    <color name="poetry_purple_dark">@color/ink</color>
+    <color name="poetry_purple_deeper">@color/ink_medium</color>
+    <color name="poetry_sakura">@color/gold_light</color>
+    <color name="poetry_card_background">@color/paper_dark</color>
+    <color name="poetry_card_alt">@color/divider</color>
+    <color name="poetry_border">@color/border</color>
+    <color name="poetry_divider">@color/divider</color>
+    <color name="poetry_bamboo">@color/success</color>
+    <color name="poetry_seal">@color/vermilion</color>
+    <color name="poetry_vermilion">@color/vermilion</color>
+    <color name="poetry_ink">@color/text_primary</color>
+    <color name="poetry_ink_light">@color/paper</color>
+    <color name="loading_bg_color">@color/paper_dark</color>
+    <color name="win_green">@color/success</color>
+    <color name="loss_red">@color/error</color>
+    <color name="chip_background">@color/paper_dark</color>
+    <color name="card_background">@color/surface</color>
+    <color name="win">@color/success</color>
+    <color name="lose">@color/error</color>
+
+    <!-- 旧渐变色 → 映射到纯色 -->
+    <color name="gradient_start">@color/gold</color>
+    <color name="gradient_middle">@color/gold_light</color>
+    <color name="gradient_end">@color/gold_dark</color>
+</resources>

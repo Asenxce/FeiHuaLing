@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 进度条 V2 — 更粗、圆润，金色渐变带微光 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景轨道 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="4dp" />
+            <solid android:color="#25D4C090" />
+        </shape>
+    </item>
+
+    <!-- 二级进度 -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="4dp" />
+                <solid android:color="#60D4C090" />
+            </shape>
+        </clip>
+    </item>
+
+    <!-- 主进度 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="4dp" />
+                <gradient
+                    android:angle="0"
+                    android:startColor="#C8A44A"
+                    android:centerColor="#D4C090"
+                    android:endColor="#B89B5E"
+                    android:type="linear" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

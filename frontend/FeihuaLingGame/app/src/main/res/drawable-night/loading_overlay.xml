@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 加载背景装饰层 — 古风半透明叠加（夜间模式） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:startColor="#6A000000"
+        android:endColor="#4A000000"
+        android:type="linear" />
+</shape>

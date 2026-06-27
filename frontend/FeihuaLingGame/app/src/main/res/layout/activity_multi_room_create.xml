@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/poetry_background"
+    android:fitsSystemWindows="true">
+
+    <!-- 顶部导航栏 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/poetry_card_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_arrow_back"
+                android:padding="8dp"
+                android:contentDescription="返回"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="创建多人房间"
+                android:textSize="20sp"
+                android:textColor="@color/poetry_text_primary"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 主内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <!-- 游戏模式卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/radius_large"
+                app:cardElevation="@dimen/card_elevation"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_large">
+
+                    <!-- 卡片标题 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/margin_normal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:background="@color/gold"
+                            android:layout_marginEnd="@dimen/padding_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="游戏模式"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/poetry_text_primary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- 模式选择器 -->
+                    <Spinner
+                        android:id="@+id/sp_game_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_medium"
+                        android:background="@drawable/bg_input"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_normal" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 对局设置卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/radius_large"
+                app:cardElevation="@dimen/card_elevation"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_large">
+
+                    <!-- 卡片标题 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/margin_normal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:background="@color/gold"
+                            android:layout_marginEnd="@dimen/padding_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="对局设置"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/poetry_text_primary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- 作答限时 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/margin_medium">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/margin_small">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="作答限时"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/poetry_text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tv_time_limit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="60秒"
+                                android:textSize="@dimen/text_size_button"
+                                android:textStyle="bold"
+                                android:textColor="@color/gold"
+                                android:minWidth="50dp"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/sb_time_limit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="90"
+                            android:progress="30" />
+                    </LinearLayout>
+
+                    <!-- 最多人数 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/margin_medium">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/margin_small">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="最多人数"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/poetry_text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tv_max_players"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4人"
+                                android:textSize="@dimen/text_size_button"
+                                android:textStyle="bold"
+                                android:textColor="@color/gold"
+                                android:minWidth="50dp"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/sb_max_players"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="4"
+                            android:progress="2" />
+                    </LinearLayout>
+
+                    <!-- 最少开局人数 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/margin_medium">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/margin_small">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="最少开局人数"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/poetry_text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tv_min_players"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2人"
+                                android:textSize="@dimen/text_size_button"
+                                android:textStyle="bold"
+                                android:textColor="@color/gold"
+                                android:minWidth="50dp"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/sb_min_players"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="4"
+                            android:progress="0" />
+                    </LinearLayout>
+
+                    <!-- 容错次数 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/margin_small">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="容错次数"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/poetry_text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tv_fault_limit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3次"
+                                android:textSize="@dimen/text_size_button"
+                                android:textStyle="bold"
+                                android:textColor="@color/gold"
+                                android:minWidth="50dp"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/sb_fault_limit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="5"
+                            android:progress="2" />
+                    </LinearLayout>
+
+                    <!-- 求助次数 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_medium">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/margin_small">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="每局求助次数"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/poetry_text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tv_help_limit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3次"
+                                android:textSize="@dimen/text_size_button"
+                                android:textStyle="bold"
+                                android:textColor="@color/gold"
+                                android:minWidth="50dp"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/sb_help_limit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 对局类型卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/radius_large"
+                app:cardElevation="@dimen/card_elevation"
+                android:layout_marginBottom="@dimen/margin_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_large">
+
+                    <!-- 卡片标题 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/margin_normal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:background="@color/gold"
+                            android:layout_marginEnd="@dimen/padding_small" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="对局类型"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/poetry_text_primary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- 单选按钮组 -->
+                    <RadioGroup
+                        android:id="@+id/rg_game_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_entertainment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="娱乐飞花令"
+                            android:checked="true"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/poetry_text_primary"
+                            android:padding="@dimen/padding_small" />
+
+                        <RadioButton
+                            android:id="@+id/rb_competitive"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="竞技模式"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/poetry_text_primary"
+                            android:padding="@dimen/padding_small" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 创建按钮 -->
+            <Button
+                android:id="@+id/btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_xlarge"
+                android:text="下一步：配置关键字"
+                android:textSize="@dimen/text_size_subtitle"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_primary_bg"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 加载页背景 — 温暖的古宣纸渐变，由上到下由浅入深 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 底层：从暖白到宣纸色的纵向渐变 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="#FDF8F0"
+                android:centerColor="#F2ECE0"
+                android:endColor="#E8DFD0"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- 顶部微光装饰：淡淡的金色光晕 -->
+    <item
+        android:bottom="480dp"
+        android:left="80dp"
+        android:right="80dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#20D4C090"
+                android:endColor="#00D4C090"
+                android:type="radial"
+                android:gradientRadius="200dp" />
+        </shape>
+    </item>
+</layer-list>

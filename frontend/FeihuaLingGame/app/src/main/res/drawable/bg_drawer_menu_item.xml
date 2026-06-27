@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 抽屉菜单项 — 古风宣纸质感，点击反馈 -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/gold_light">
+    <item>
+        <shape>
+            <solid android:color="@color/surface" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</ripple>

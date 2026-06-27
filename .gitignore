@@ -1,0 +1,36 @@
+# 古诗词数据（太大，不适合上传）
+backend/feihualingbattle/chinese-poetry-data/
+
+# Java / Maven
+backend/**/target/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.settings/
+.classpath
+.project
+
+# Gradle
+.gradle/
+local.properties
+
+# Android build
+frontend/**/build/
+frontend/**/app/build/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Env files (可能含密钥)
+*.env
+.env.local

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_white"
+    android:elevation="2dp"
+    android:padding="14dp"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_record_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单关键字飞花令"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_text_primary" />
+
+        <TextView
+            android:id="@+id/tv_record_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[春]"
+            android:textSize="11sp"
+            android:textColor="@color/poetry_primary"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_tag_gold"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_record_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第1名"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_primary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024-01-01 14:30"
+            android:textSize="12sp"
+            android:textColor="@color/poetry_text_secondary"
+            android:drawableStart="@drawable/ic_time"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/poetry_text_secondary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_record_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2分30秒"
+            android:textSize="12sp"
+            android:textColor="@color/poetry_text_secondary" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/poetry_divider"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_record_rounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作答轮次"
+                android:textSize="10sp"
+                android:textColor="@color/poetry_text_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_record_accuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80%"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正确率"
+                android:textSize="10sp"
+                android:textColor="@color/poetry_text_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_record_correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6/2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对/错"
+                android:textSize="10sp"
+                android:textColor="@color/poetry_text_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_record_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+10"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/poetry_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分"
+                android:textSize="10sp"
+                android:textColor="@color/poetry_text_secondary" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

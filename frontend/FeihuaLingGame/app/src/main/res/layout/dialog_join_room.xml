@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large"
+    android:background="@drawable/card_white">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加入房间"
+        android:textSize="@dimen/text_size_subtitle"
+        android:textStyle="bold"
+        android:textColor="@color/brown_dark"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- 提示文字 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入好友分享的房间码（6位）"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/poetry_text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_large" />
+
+    <!-- 房间码输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="房间码"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="@dimen/radius_medium"
+        app:boxCornerRadiusTopEnd="@dimen/radius_medium"
+        app:boxCornerRadiusBottomStart="@dimen/radius_medium"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_medium"
+        app:counterEnabled="true"
+        app:counterMaxLength="6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_room_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:maxLength="6"
+            android:textSize="@dimen/text_size_large"
+            android:letterSpacing="0.3"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 粘贴按钮 -->
+    <Button
+        android:id="@+id/btn_paste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="从剪贴板粘贴"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/poetry_primary"
+        android:textSize="@dimen/text_size_small" />
+
+    <!-- 按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_large"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textSize="@dimen/text_size_button"
+            android:textColor="@color/poetry_text_primary"
+            android:background="@drawable/btn_secondary_bg"
+            android:layout_marginEnd="@dimen/margin_small" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_large"
+            android:layout_weight="1"
+            android:text="加入"
+            android:textSize="@dimen/text_size_button"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_primary_bg"
+            android:layout_marginStart="@dimen/margin_small" />
+    </LinearLayout>
+</LinearLayout>

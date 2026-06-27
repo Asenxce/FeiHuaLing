@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.feihualinggame.widget.SwipeDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <!-- 主内容区域 -->
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cream">
+
+        <!-- 顶部功能栏 - 优化版 -->
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/surface"
+            android:elevation="0dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="top"
+            android:layout_alignParentTop="true">
+
+            <!-- 左侧：用户头像 - 美化版 -->
+            <ImageView
+                android:id="@+id/btn_user_avatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_avatar_default"
+                android:contentDescription="用户头像"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop" />
+
+            <!-- 中间占位 -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- 右侧：设置按钮 - 美化版 -->
+            <ImageView
+                android:id="@+id/btn_settings"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_settings"
+                android:contentDescription="设置"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/gold" />
+        </LinearLayout>
+
+        <!-- 下拉菜单 - 美化版 -->
+        <LinearLayout
+            android:id="@+id/dropdown_menu"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_white"
+            android:elevation="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:padding="4dp">
+
+            <!-- 邮箱 -->
+            <LinearLayout
+                android:id="@+id/menu_mailbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_mail"
+                    app:tint="@color/gold"
+                    android:contentDescription="邮箱" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邮箱"
+                    android:textSize="15sp"
+                    android:textColor="@color/brown_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="14dp" />
+
+                <!-- 未读徽章 -->
+                <TextView
+                    android:id="@+id/badge_unread"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/bg_badge_red"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="8dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- 每日好签 -->
+            <LinearLayout
+                android:id="@+id/menu_daily_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="@color/gold"
+                    android:contentDescription="每日好签" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每日好签"
+                    android:textSize="15sp"
+                    android:textColor="@color/brown_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="14dp" />
+            </LinearLayout>
+
+            <!-- 系统设置 -->
+            <LinearLayout
+                android:id="@+id/menu_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_settings"
+                    app:tint="@color/gold"
+                    android:contentDescription="系统设置" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="系统设置"
+                    android:textSize="15sp"
+                    android:textColor="@color/brown_dark"
+                    android:textStyle="bold"
+                    android:layout_marginStart="14dp" />
+            </LinearLayout>
+
+            <!-- 退出登录 -->
+            <LinearLayout
+                android:id="@+id/menu_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_logout"
+                    app:tint="@color/loss_red"
+                    android:contentDescription="退出登录" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出登录"
+                    android:textSize="15sp"
+                    android:textColor="@color/loss_red"
+                    android:textStyle="bold"
+                    android:layout_marginStart="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 底部导航栏 - 优化版 -->
+        <LinearLayout
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/surface"
+            android:elevation="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <!-- 对战大厅 -->
+            <LinearLayout
+                android:id="@+id/btn_battle_hall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/iv_battle_hall"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_emoji_events"
+                    android:contentDescription="对战大厅" />
+
+                <TextView
+                    android:id="@+id/tv_battle_hall_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="对战大厅"
+                    android:textSize="11sp"
+                    android:textColor="@color/poetry_text_primary"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <!-- 诗词查询 -->
+            <LinearLayout
+                android:id="@+id/btn_poetry_query"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+            
+                <ImageView
+                    android:id="@+id/iv_poetry_query"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_article"
+                    android:contentDescription="诗词查询" />
+            
+                <TextView
+                    android:id="@+id/tv_poetry_query_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="诗词查询"
+                    android:textSize="11sp"
+                    android:textColor="@color/poetry_text_primary"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+            
+            <!-- 好友列表 -->
+            <LinearLayout
+                android:id="@+id/btn_friend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+            
+                <ImageView
+                    android:id="@+id/iv_friend"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_people"
+                    android:contentDescription="好友列表" />
+            
+                <TextView
+                    android:id="@+id/tv_friend_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="好友列表"
+                    android:textSize="11sp"
+                    android:textColor="@color/poetry_text_primary"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+            
+            <!-- 经典收藏 -->
+            <LinearLayout
+                android:id="@+id/btn_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+            
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_book"
+                    android:contentDescription="经典收藏" />
+            
+                <TextView
+                    android:id="@+id/tv_profile_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经典收藏"
+                    android:textSize="11sp"
+                    android:textColor="@color/poetry_text_primary"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Fragment容器 - 必须放在最后面以确保正确层级 -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@id/bottom_navigation"
+            android:layout_below="@id/top_bar"
+            android:background="@color/cream" />
+
+    </RelativeLayout>
+
+    <!-- 侧滑抽屉 - 美化版 -->
+    <LinearLayout
+        android:id="@+id/nav_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/surface"
+        android:elevation="16dp">
+
+        <!-- 抽屉头部 - 美化版 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/bg_drawer_header">
+
+            <!-- 装饰圆形 -->
+            <View
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-30dp"
+                android:layout_marginEnd="-30dp"
+                android:background="@drawable/circle_white_solid"
+                android:alpha="0.1" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="-20dp"
+                android:background="@drawable/circle_white_solid"
+                android:alpha="0.08" />
+
+            <!-- 内容区 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/drawer_avatar"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:src="@drawable/ic_avatar_default"
+                    android:contentDescription="头像"
+                    android:elevation="4dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/drawer_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="飞花令玩家"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp"
+                    android:shadowColor="#40000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="2" />
+
+                <TextView
+                    android:id="@+id/drawer_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份码：---"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:alpha="0.9"
+                    android:layout_marginTop="8dp"
+                    android:shadowColor="#30000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 抽屉菜单项 - 美化版 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- 个人资料 -->
+                <LinearLayout
+                    android:id="@+id/drawer_menu_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_drawer_menu_item">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_person"
+                        app:tint="@color/gold"
+                        android:contentDescription="个人资料" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="个人资料"
+                        android:textSize="15sp"
+                        android:textColor="@color/brown_dark"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/gray_text" />
+                </LinearLayout>
+
+                <!-- 系统设置 -->
+                <LinearLayout
+                    android:id="@+id/drawer_menu_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_drawer_menu_item">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_settings"
+                        app:tint="@color/gold"
+                        android:contentDescription="系统设置" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="系统设置"
+                        android:textSize="15sp"
+                        android:textColor="@color/brown_dark"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/gray_text" />
+                </LinearLayout>
+
+                <!-- 游戏规则 -->
+                <LinearLayout
+                    android:id="@+id/drawer_menu_rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_drawer_menu_item">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_help"
+                        app:tint="@color/gold"
+                        android:contentDescription="游戏规则" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="游戏规则"
+                        android:textSize="15sp"
+                        android:textColor="@color/brown_dark"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/gray_text" />
+                </LinearLayout>
+
+                <!-- 规则引擎 -->
+                <LinearLayout
+                    android:id="@+id/drawer_menu_rule_engine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_drawer_menu_item">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_settings"
+                        app:tint="@color/gold"
+                        android:contentDescription="规则引擎" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="自定义飞花令"
+                        android:textSize="15sp"
+                        android:textColor="@color/brown_dark"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/gray_text" />
+                </LinearLayout>
+
+                <!-- 个人战绩 -->
+                <LinearLayout
+                    android:id="@+id/drawer_menu_records"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_drawer_menu_item">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_emoji_events"
+                        app:tint="@color/gold"
+                        android:contentDescription="个人战绩" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="个人战绩"
+                        android:textSize="15sp"
+                        android:textColor="@color/brown_dark"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/gray_text" />
+                </LinearLayout>
+
+                <!-- 邮箱 -->
+                <LinearLayout
+                    android:id="@+id/drawer_menu_mailbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_drawer_menu_item">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_mail"
+                        app:tint="@color/gold"
+                        android:contentDescription="邮箱" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="邮箱"
+                        android:textSize="15sp"
+                        android:textColor="@color/brown_dark"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/gray_text" />
+                </LinearLayout>
+
+                <!-- 退出登录 -->
+                <LinearLayout
+                    android:id="@+id/drawer_menu_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_drawer_menu_item">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_logout"
+                        app:tint="@color/loss_red"
+                        android:contentDescription="退出登录" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="退出登录"
+                        android:textSize="15sp"
+                        android:textColor="@color/loss_red"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/loss_red"
+                        android:alpha="0.6" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</com.example.feihualinggame.widget.SwipeDrawerLayout>

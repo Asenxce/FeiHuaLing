@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_rounded"
+    android:padding="24dp"
+    android:layout_margin="16dp">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+        
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_people_filled"
+            android:tint="@color/poetry_primary" />
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加好友"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/poetry_text_primary"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- 说明文字 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入好友的 8 位身份码"
+        android:textSize="14sp"
+        android:textColor="@color/poetry_text_secondary"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 输入框 -->
+    <EditText
+        android:id="@+id/et_identity_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text"
+        android:padding="12dp"
+        android:hint="请输入身份码"
+        android:textSize="16sp"
+        android:textColor="@color/poetry_text_primary"
+        android:textColorHint="@color/text_hint"
+        android:inputType="number"
+        android:maxLength="8"
+        android:maxLines="1" />
+
+    <!-- 按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="@color/poetry_text_secondary"
+            android:background="@drawable/btn_text_bg"
+            android:paddingHorizontal="16dp" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认添加"
+            android:textSize="14sp"
+            android:textColor="@color/text_on_primary"
+            android:background="@drawable/btn_primary_bg"
+            android:paddingHorizontal="24dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

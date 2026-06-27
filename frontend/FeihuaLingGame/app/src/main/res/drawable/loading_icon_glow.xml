@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 图标背景光晕 — 淡金色圆形光晕 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:angle="270"
+        android:startColor="#18B89B5E"
+        android:centerColor="#0DB89B5E"
+        android:endColor="#00B89B5E"
+        android:type="radial"
+        android:gradientRadius="55dp" />
+    <size
+        android:width="110dp"
+        android:height="110dp" />
+</shape>

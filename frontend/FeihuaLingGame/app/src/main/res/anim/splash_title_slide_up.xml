@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 标题滑入动画：从下往上滑入 + 淡入 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/decelerate_interpolator">
+    
+    <translate
+        android:fromYDelta="50"
+        android:toYDelta="0"
+        android:duration="800" />
+    
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="800" />
+</set>
