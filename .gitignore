@@ -34,3 +34,6 @@ Thumbs.db
 # Env files (可能含密钥)
 *.env
 .env.local
+
+# 导入日志
+import_log_*.txt
