@@ -36,5 +36,8 @@ Thumbs.db
 *.env
 .env.local
 
+# Trae IDE
+frontend/SKILL.md
+
 # 导入日志
 import_log_*.txt
